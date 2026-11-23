@@ -1,9 +1,10 @@
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
-	
+    info.startCountdown(timer)
 })
 info.onCountdownEnd(function () {
     game.gameOver(false)
 })
+let timer = 0
 scene.setBackgroundImage(img`
     9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
     9999999999999999999999999999999999999999999999999999111111111119999999999999999999999999999999999999991111999999999999999999999999999999999999999999111111111111
@@ -145,7 +146,7 @@ let burger = sprites.create(img`
     . . . c c c c c e e e e e . . . 
     `, SpriteKind.Food)
 burger.setPosition(79, 52)
-let timer = 10
+timer = 10
 let burger_health = 15
 let difficulty = 1
 let fullness = 0
